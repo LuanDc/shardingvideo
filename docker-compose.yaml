@@ -1,0 +1,22 @@
+services: 
+
+  db_shard1:
+    image: pgshard
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+
+  db_shard2:
+    image: pgshard
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+
+  db_shard3:
+    image: pgshard
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5434:5432"
